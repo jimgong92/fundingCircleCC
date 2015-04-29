@@ -23,8 +23,12 @@ def getNPrimes(bound):
     n += 1
   return result
 
+# Params: padding, Integer; value, Integer
+# Return: String - formatted string with provided padding
+def getStringF(padding, value):
+  return '{n:{width}d}'.format(width=padding, n=value)
+
 def generatePrimeTable(bound):
-  table = 'TEST'
   # Get primes within bound
   primes = getNPrimes(bound)
   # Get width of columns (length of biggest number)
@@ -35,11 +39,13 @@ def generatePrimeTable(bound):
   #   Offset initial row by width of the row labels
   columnLabels = rowLabelOffset * ' '
   for i in range(bound):
-    columnLabels += 'TEST'
+    columnLabels += getStringF(columnWidth, primes[i])
+  #Initialize table with column label row
+  table = columnLabels
   # Generate table rows (row label | product of row * column labels)
   for i in range(bound):
-    row = '\nTEST'
+    row = '\n' + getStringF(rowLabelOffset, primes[i])
     for j in range(bound):
-      row += 'TEST'
+      row += getStringF(columnWidth, primes[j] * primes[i])
     table += row
   return table

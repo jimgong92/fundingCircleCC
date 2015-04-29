@@ -1,5 +1,5 @@
 import math
-from helpers import isPrime, getNPrimes, generatePrimeTable
+from helpers import generatePrimeTable
 
 def run():
   table = generatePrimeTable(10)
