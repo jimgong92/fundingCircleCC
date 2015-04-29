@@ -1,9 +1,12 @@
 import math
+import sys
+
 from helpers import generatePrimeTable
 
-def run():
-  table = generatePrimeTable(10)
+def run(n):
+  table = generatePrimeTable(n)
   print(table)
 
 if (__name__ == '__main__'):
-  run()
+  bound = int(sys.argv[1])
+  run(bound)
