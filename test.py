@@ -11,6 +11,9 @@ class TestSolverMethods(unittest.TestCase):
     self.assertTrue(helpers.isPrime(13))
     self.assertFalse(helpers.isPrime(1))
     self.assertFalse(helpers.isPrime(4))
-    
+
+  def test_getNPrimes(self):
+    self.assertEqual(helpers.getNPrimes(4), [2, 3, 5, 7])
+
 if __name__ == '__main__':
   unittest.main()
