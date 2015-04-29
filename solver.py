@@ -1,6 +1,10 @@
 import math
 
-def printPrimeTable(bound):
+def run():
+  table = ''
+  return table
+
+def generatePrimeTable(bound):
   table = ''
   # Get primes within bound
 
@@ -10,7 +14,7 @@ def printPrimeTable(bound):
 
   # Generate table rows (row label | product of row * column labels)
 
-  print(table)
+  return table
 
 if (__name__ == '__main__'):
-  printPrimeTable(10)
+  run()
